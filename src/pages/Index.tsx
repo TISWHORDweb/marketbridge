@@ -330,7 +330,7 @@ const Index = () => {
               { milestone: "Insight gathering", year: 2023 },
               { milestone: "Market segmentation", year: 2024 },
               { milestone: "Design prototypes", year: 2025 },
-              { milestone: "Testing with target users", year: 2026 },
+              { milestone: "Testing with target users", year: 2026, noCheck: true },
               { milestone: "Scaling solutions", year: 2027, pending: true },
             ].map((item, idx) => (
               <Card key={idx} className="p-4 bg-secondary/50 hover:bg-secondary transition-colors">
@@ -341,8 +341,10 @@ const Index = () => {
                 <div className="flex justify-end">
                   {item.pending ? (
                     <div className="w-5 h-5 border-2 border-primary rounded-full"></div>
+                  ) : item.noCheck ? (
+                    <div></div>
                   ) : (
-                    <CheckCircle2 className={`w-5 h-5 ${item.year === 2026 ? 'text-primary' : 'text-accent'}`} />
+                    <CheckCircle2 className="w-5 h-5 text-accent" />
                   )}
                 </div>
               </Card>
@@ -392,7 +394,7 @@ const Index = () => {
                   <div></div>
                   <div></div>
                   <div></div>
-                  <div className="text-center"><CheckCircle2 className="w-4 h-4 lg:w-5 lg:h-5 text-primary mx-auto" /></div>
+                  <div></div>
                   <div></div>
                 </div>
                 
@@ -446,7 +448,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer id="contact" className="py-12 sm:py-14 md:py-16 bg-gradient-to-br from-primary via-accent to-primary text-white">
+      <footer id="contact" className="py-12 sm:py-14 md:py-16 bg-black text-white">
         <div className="container mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20">
           <div className="max-w-6xl mx-auto">
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 mb-8 md:mb-12">
