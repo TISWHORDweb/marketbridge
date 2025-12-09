@@ -31,17 +31,17 @@ const Index = () => {
               <div className="text-center md:text-left animate-fade-in order-1">
                 <div className="inline-block mb-4 md:mb-6 px-3 md:px-4 py-1.5 md:py-2 bg-primary/10 rounded-full">
                   <span className="text-primary font-semibold text-xs sm:text-sm">MarketBridge Studio</span>
-            </div>
+                </div>
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent leading-tight">
-              Accelerating Adoption of Healthcare Innovations
-            </h1>
+                  Accelerating Adoption of Healthcare Innovations
+                </h1>
                 <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 md:mb-8 max-w-2xl mx-auto md:mx-0">
-              Data-driven strategies that transform healthcare innovation into market success
-            </p>
+                  Data-driven strategies that transform healthcare innovation into market success
+                </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                   <Button size="lg" className="group shadow-lg hover:shadow-xl transition-all w-full sm:w-auto">
-              Get Started
+                    Get Started
                     <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
                   <Button 
@@ -70,6 +70,8 @@ const Index = () => {
                     src={heroImage} 
                     alt="Healthcare Innovation" 
                     className="w-full h-[300px] sm:h-[350px] md:h-[450px] lg:h-[500px] object-cover"
+                    fetchPriority="high"
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
                 </div>
@@ -134,6 +136,8 @@ const Index = () => {
                   src={solutionImage1} 
                   alt="Insight" 
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>
@@ -150,6 +154,8 @@ const Index = () => {
                   src={solutionImage2} 
                   alt="Strategy" 
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>
@@ -166,6 +172,8 @@ const Index = () => {
                   src={solutionImage3} 
                   alt="Execution" 
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>
@@ -182,6 +190,8 @@ const Index = () => {
                   src={solutionImage4} 
                   alt="Optimization" 
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>
@@ -205,6 +215,8 @@ const Index = () => {
                 src={processImage} 
                 alt="Our Process" 
                 className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-primary/40 to-accent/40"></div>
             </div>
@@ -269,6 +281,8 @@ const Index = () => {
                   src={useCaseImage1} 
                   alt="Remote Patient Monitoring" 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 group-hover:text-primary transition-colors">Remote Patient Monitoring</h3>
@@ -283,6 +297,8 @@ const Index = () => {
                   src={useCaseImage2} 
                   alt="Digital Therapeutics" 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 group-hover:text-primary transition-colors">Digital Therapeutics</h3>
@@ -297,6 +313,8 @@ const Index = () => {
                   src={useCaseImage3} 
                   alt="Precision Medicine" 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 group-hover:text-primary transition-colors">Precision Medicine</h3>
@@ -311,6 +329,8 @@ const Index = () => {
                   src={useCaseImage4} 
                   alt="Value-Based Care" 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 group-hover:text-primary transition-colors">Value-Based Care</h3>
@@ -425,25 +445,31 @@ const Index = () => {
             </p>
           </div>
           <div className="grid sm:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
-            <div className="relative h-64 md:h-80 rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+            <div className="relative h-64 md:h-80 rounded-lg overflow-hidden group cursor-pointer">
               <img 
                 src={successImage1} 
                 alt="Success Story 1" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                loading="lazy"
+                decoding="async"
               />
             </div>
-            <div className="relative h-64 md:h-80 rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+            <div className="relative h-64 md:h-80 rounded-lg overflow-hidden group cursor-pointer">
               <img 
                 src={successImage2} 
                 alt="Success Story 2" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                loading="lazy"
+                decoding="async"
               />
             </div>
-            <div className="relative h-64 md:h-80 rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+            <div className="relative h-64 md:h-80 rounded-lg overflow-hidden group cursor-pointer">
               <img 
                 src={successImage3} 
                 alt="Success Story 3" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -472,6 +498,8 @@ const Index = () => {
                   src={aboutImage} 
                   alt="Dara" 
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>
@@ -515,6 +543,8 @@ const Index = () => {
                   src={contactImage} 
                   alt="Contact" 
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>
