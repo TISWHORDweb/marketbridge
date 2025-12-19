@@ -15,7 +15,7 @@ import useCaseImage4 from "@/assets/images/pexels-kampus-8353793-modified.jpg";
 import successImage1 from "@/assets/images/pexels-karola-g-7195310-modified.jpg";
 import successImage2 from "@/assets/images/pexels-olly-3779701-modified.jpg";
 import successImage3 from "@/assets/images/pexels-rdne-6129494-modified.jpg";
-import aboutImage from "@/assets/images/pexels-cottonbro-5722164-modified.jpg";
+import aboutImage from "@/assets/images/hero.jpeg";
 import contactImage from "@/assets/images/pexels-pixabay-221537-modified.jpg";
 
 const Index = () => {
@@ -497,7 +497,7 @@ const Index = () => {
                 <img 
                   src={aboutImage} 
                   alt="Dara" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                   loading="lazy"
                   decoding="async"
                 />
